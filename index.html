@@ -481,19 +481,38 @@
                     </div>
                 </div>
                 <div class="contact-form static-contact-card">
-                    <div class="form">
+                    <form class="form" action="https://formspree.io/f/xnjoqpnd" method="POST">
                         <h3>Start a Conversation</h3>
-                        <p>This site is now a static GitHub Pages build, so the old backend contact form has been retired before it could haunt the place. For privacy, I’m not publishing a downloadable resume or plain-text email address here. LinkedIn is the best first contact.</p>
-                        <div class="availability">
-                            <h4>Best ways to connect</h4>
-                            <ul>                                <li><a href="https://www.linkedin.com/in/adam-reue/" target="_blank" rel="noopener">Message me on LinkedIn</a></li>                            </ul>
+                        <p>Send a note here and it’ll land in my inbox without needing a custom backend shambling around in the basement.</p>
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
                         </div>
-                        <p>If you're reaching out about a role or consulting work, include your timeline, goals, and whether you need platform engineering, DevOps, cloud architecture, security hardening, or AI-enabled systems help.</p>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company / Organization</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Tell me what you're building, your timeline, and where you need help..." required></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="New contact form submission from adamreue.com">
+                        <input type="hidden" name="_next" value="https://mylegitches.github.io/adamreue-com/#contact">
+                        <div class="availability">
+                            <h4>Prefer LinkedIn instead?</h4>
+                            <ul>
+                                <li><a href="https://www.linkedin.com/in/adam-reue/" target="_blank" rel="noopener">Message me on LinkedIn</a></li>
+                            </ul>
+                        </div>
                         <div class="hero-buttons">
-                            <a class="btn btn-primary" href="https://www.linkedin.com/in/adam-reue/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+                            <button class="btn btn-primary" type="submit">Send Message</button>
                             <a class="btn btn-secondary" href="https://www.linkedin.com/in/adam-reue/" target="_blank" rel="noopener">Connect on LinkedIn</a>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
