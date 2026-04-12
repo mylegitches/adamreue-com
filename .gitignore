@@ -1,2 +1,20 @@
+# Editor and OS noise
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
+*~
+.#*
+
+# Scripting
+scripts/watch-and-push.pid
+scripts/watch-and-push.log
+
+# Temporary
+*.tmp
+*.bak
+.publish-trigger
+
+# Python (if any creeps in)
+__pycache__/
+*.pyc

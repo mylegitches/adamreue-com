@@ -1,0 +1,29 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout files
+        uses: actions/checkout@v4
+
+      - name: Confirm index.html is present
+        run: |
+          if [ ! -f index.html ]; then
+            echo "ERROR: index.html not found in repository root"
+            exit 1
+          fi
+          echo "index.html confirmed. Files in root:"
+          ls -la
+
+      - name: Log deploy
+        run: |
+          echo "Deploy triggered by commit: ${{ github.sha }}"
+          echo "Author: ${{ github.actor }}"
+          echo "Message: ${{ github.event.commits[0].message }}"
+          echo "Deployment time: $(date -u)"
