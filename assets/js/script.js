@@ -58,6 +58,9 @@ function initNavigation() {
         const sections = document.querySelectorAll('section[id]');
 
         sections.forEach(section => {
+            // Only sections with a nav link take over the highlight
+            const id = section.getAttribute('id');
+            if (!document.querySelector('.nav-link[href="#' + id + '"]')) return;
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
             if (scrollY >= (sectionTop - 200)) {

@@ -1840,3 +1840,102 @@ section {
 .static-contact-card .hero-buttons {
     flex-wrap: wrap;
 }
+
+/* Capabilities ("What I Build") */
+.capabilities {
+    background: var(--bg-primary);
+}
+
+.capabilities-summary {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+}
+
+.capabilities-summary p {
+    margin-bottom: 1rem;
+}
+
+.capabilities-facts {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.capabilities-facts li {
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--primary-color);
+    background: rgba(46, 139, 87, 0.08);
+    border-radius: var(--radius-md);
+}
+
+.capability-card {
+    grid-template-rows: auto 1fr auto;
+    min-height: 0;
+}
+
+.expertise-card .seen-in {
+    min-height: 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--accent-text);
+}
+
+/* Agents */
+.agents-grid {
+    margin-bottom: 4rem;
+}
+
+.agent-card {
+    --description-min-height: 0;
+}
+
+.subsection-header {
+    margin-top: 2rem;
+}
+
+/* More on GitHub */
+.repo-index {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.repo-group h4 {
+    margin-bottom: 1rem;
+    color: var(--accent-text);
+}
+
+.repo-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.75rem;
+    line-height: 1.6;
+}
+
+.repo-group a {
+    color: var(--accent-text);
+    font-weight: 600;
+}
+
+.repo-private {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* Card links: reveal for keyboard focus and on touch screens (no hover) */
+.passion-project-card:focus-within .project-links {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (hover: none) {
+    .passion-project-card .project-links {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
